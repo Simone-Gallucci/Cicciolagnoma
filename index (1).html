@@ -1,0 +1,127 @@
+<!-- explorer.exe `wslpath -w /home/utente/ITS/index.html` (Linux)-->
+ <!-- start /home/utente/ITS/index.html (Windows)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A TE CUCCIOLA</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .dedication-box {
+            max-width: 600px;
+            margin:20px auto;
+            padding: 30px;
+            background: linear-gradient(45deg, #ffedec, #ffd6e0);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            animation: float 3s ease-in-out infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        body {
+            background-color: #fff5f5;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .message {
+            color: #815b5b;
+            font-size: 1.2em;
+            text-align: center;
+            line-height: 1.6;
+            white-space: pre-line;
+        }
+
+        .hearts {
+            color: #ff001e;
+            font-size: 24px;
+            animation: pulse 1.5s ease infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="dedication-box">
+            <div class="hearts">♥ ♥ ♥</div>
+            <h1 style="text-align: center; color: red">PER TE</h1>
+            <p class="message" v-html="message"></p>
+            <div class="hearts">♥ ♥ ♥</div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                //backtic alt+96(`)
+                return {
+                    //dedica alla mia migliore amica per la quale nutro un sentimento speciale e sincero'
+                    message: 
+    `A te, 
+     che sei la mia migliore amica,
+     In un mondo che corre 
+     troppo in fretta, 
+     tu sei la mia costante.
+     La mia ancora, 
+     la mia risata nei giorni storti, 
+     il mio rifugio sicuro.
+
+     Voglio che tu sappia una cosa: 
+     non dovrai 
+     mai 
+     avere paura di perdermi.
+     io sarò sempre 
+     al tuo fianco.
+     Anche quando tutto sembrerà crollare,        
+     io ci sarò.
+     Per proteggerti.
+     Per sostenerti.
+     Per ricordarti che tu,
+     sei molto più forte 
+     di quanto pensi,
+     e comunque sia
+     io resterò accanto a te 
+     niente e nessuno potrà 
+     mai cambiere questo.
+     
+     Credo in te, 
+     nei tuoi sogni, 
+     nelle tue battaglie.
+     E anche se adesso c'è questa 
+     distanza tra noi,
+     la supereremo,
+     te lo prometto.
+     
+     Nessun chilometro 
+     potrà mai cambiare 
+     quello che provo per te.
+     
+     <span style="color:red; font-weight:bold;">
+     Ti adoro.
+     Insieme.
+     Sempre e per sempre.
+     Il TUO cucciolo ❤️
+     </span>`                
+                    }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
